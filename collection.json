@@ -1,0 +1,145 @@
+{
+    "info": {
+      "name": "Lab6 Notes API",
+      "_postman_id": "lab6-notes-api-2025-05-05T15:16:46.361170",
+      "description": "Postman collection для тестування REST API лабораторної №6",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "GET all notes",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/notes",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "notes"
+            ]
+          }
+        }
+      },
+      {
+        "name": "GET note by name",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/notes/test",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "notes",
+              "test"
+            ]
+          }
+        }
+      },
+      {
+        "name": "POST new note",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "note_name",
+                "value": "test",
+                "type": "text"
+              },
+              {
+                "key": "note",
+                "value": "Це тестова нотатка",
+                "type": "text"
+              }
+            ]
+          },
+          "url": {
+            "raw": "http://localhost:3000/write",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "write"
+            ]
+          }
+        }
+      },
+      {
+        "name": "PUT update note",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "Оновлений текст нотатки"
+          },
+          "url": {
+            "raw": "http://localhost:3000/notes/test",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "notes",
+              "test"
+            ]
+          }
+        }
+      },
+      {
+        "name": "DELETE note",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/notes/test",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "notes",
+              "test"
+            ]
+          }
+        }
+      },
+      {
+        "name": "GET HTML upload form",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/UploadForm.html",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "UploadForm.html"
+            ]
+          }
+        }
+      }
+    ]
+  }
